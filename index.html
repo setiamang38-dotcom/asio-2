@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASIO Fashion - Tampil Stylish & Nyaman</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            800: '#065f46',
+                            900: '#064e3b',
+                            950: '#022c22',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-900 selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-extrabold tracking-wider text-black">
+                        ASIO<span class="text-emerald-900">.</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#koleksi" class="text-sm font-medium text-slate-600 hover:text-emerald-900 transition-colors">Koleksi</a>
+                    <a href="#keunggulan" class="text-sm font-medium text-slate-600 hover:text-emerald-900 transition-colors">Keunggulan</a>
+                    <a href="#cara-pesan" class="text-sm font-medium text-slate-600 hover:text-emerald-900 transition-colors">Cara Pesan</a>
+                    <a href="#kontak" class="text-sm font-medium text-slate-600 hover:text-emerald-900 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20ingin%20tanya%20produk%20fashion" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center gap-2 bg-emerald-900 hover:bg-emerald-800 text-white font-medium text-sm px-5 py-2.5 rounded-full shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        Pesan WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" type="button" class="text-slate-700 hover:text-black focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#koleksi" class="block py-2 text-base font-medium text-slate-700 hover:text-emerald-900 hover:bg-slate-50 px-3 rounded-lg">Koleksi</a>
+            <a href="#keunggulan" class="block py-2 text-base font-medium text-slate-700 hover:text-emerald-900 hover:bg-slate-50 px-3 rounded-lg">Keunggulan</a>
+            <a href="#cara-pesan" class="block py-2 text-base font-medium text-slate-700 hover:text-emerald-900 hover:bg-slate-50 px-3 rounded-lg">Cara Pesan</a>
+            <a href="#kontak" class="block py-2 text-base font-medium text-slate-700 hover:text-emerald-900 hover:bg-slate-50 px-3 rounded-lg">Kontak</a>
+            <div class="pt-2">
+                <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20ingin%20tanya%20produk%20fashion" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center justify-center gap-2 bg-emerald-900 hover:bg-emerald-800 text-white font-medium py-3 rounded-xl w-full text-center shadow-md">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Pesan WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden pt-12 pb-20 md:py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Hero Text -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/60 text-emerald-900 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-emerald-900"></i>
+                        Koleksi Fashion Terbaru 2026
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-tight">
+                        Tampil Stylish & Nyaman <span class="text-emerald-900">Tanpa Bikin Kantong Bolong!</span>
+                    </h1>
+                    
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Jelajahi koleksi fashion harian terbaik di ASIO. Didesain khusus untuk kamu yang ingin tampil keren, percaya diri, dan tetap nyaman sepanjang hari.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20ingin%20memesan%20produk" target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-emerald-900 hover:bg-emerald-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-emerald-900/20 hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            Pesan via WhatsApp
+                        </a>
+                        <a href="#koleksi" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-slate-800 font-semibold px-8 py-4 rounded-xl border border-slate-300 shadow-sm transition-all">
+                            Lihat Koleksi
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-8 border-t border-slate-200/60 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <p class="text-2xl font-bold text-black">10K+</p>
+                            <p class="text-xs sm:text-sm text-slate-500">Pelanggan Puas</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-black">100%</p>
+                            <p class="text-xs sm:text-sm text-slate-500">Bahan Premium</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-black">4.9/5</p>
+                            <p class="text-xs sm:text-sm text-slate-500">Rating Toko</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="absolute -top-4 -left-4 w-72 h-72 bg-emerald-100 rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-pulse"></div>
+                        <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-slate-200 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
+                        
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop" 
+                                 alt="ASIO Fashion Model" 
+                                 class="w-full h-[480px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x800/064e3b/ffffff?text=ASIO+Fashion';">
+                            <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2.5 bg-emerald-900 text-white rounded-xl">
+                                        <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-sm text-black">Jaminan Kualitas ASIO</p>
+                                        <p class="text-xs text-slate-600">Bahan lembut, adem, & jahitan presisi</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION KEUNGGULAN -->
+    <section id="keunggulan" class="py-16 md:py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-emerald-900 uppercase mb-2">Keunggulan Kami</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-black">Kenapa Harus ASIO?</p>
+                <p class="text-slate-600 mt-3 text-base">Kami memberikan pengalaman belanja fashion online terbaik dengan jaminan kualitas tanpa kompromi.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-900/10 text-emerald-900 group-hover:bg-emerald-900 group-hover:text-white rounded-xl flex items-center justify-center transition-colors duration-300 mb-6">
+                        <i data-lucide="sparkles" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Kualitas Premium, Harga Friendly</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Material terpilih bermutu tinggi dengan harga terjangkau tanpa mengorbankan kenyamanan.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-900/10 text-emerald-900 group-hover:bg-emerald-900 group-hover:text-white rounded-xl flex items-center justify-center transition-colors duration-300 mb-6">
+                        <i data-lucide="headset" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Pelayanan Cepat & Ramah</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tim Customer Service siap membantu rekomendasi ukuran dan respons konsultasi dengan cepat.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-900/10 text-emerald-900 group-hover:bg-emerald-900 group-hover:text-white rounded-xl flex items-center justify-center transition-colors duration-300 mb-6">
+                        <i data-lucide="truck" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Pengiriman Tepat Waktu</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Pesanan diproses langsung di hari yang sama. Pengiriman kilat sampai tujuan dalam 2-3 hari.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-emerald-200 hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-emerald-900/10 text-emerald-900 group-hover:bg-emerald-900 group-hover:text-white rounded-xl flex items-center justify-center transition-colors duration-300 mb-6">
+                        <i data-lucide="rotate-ccw" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-3">Garansi 100% Retur</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Barang cacat atau ukuran tidak pas? Garansi tukar barang atau uang kembali 100% tanpa ribet.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION KOLEKSI PRODUK -->
+    <section id="koleksi" class="py-16 md:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-emerald-900 uppercase mb-2">Produk Pilihan</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-black">Koleksi Favorit ASIO</p>
+                <p class="text-slate-600 mt-3 text-base">Pilihan fashion terlaris yang dirancang khusus untuk kenyamanan aktivitas harianmu.</p>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop" 
+                             alt="Kaos Polos Essential" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x750/064e3b/ffffff?text=Kaos+Polos';">
+                        <span class="absolute top-4 left-4 bg-emerald-900 text-white text-xs font-semibold px-3 py-1 rounded-full">Best Seller</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-black group-hover:text-emerald-900 transition-colors">Kaos Polos Essential</h3>
+                        <p class="text-slate-600 text-sm mt-2 flex-grow">Kaos polos kasual untuk tampilan simpel dan elegan sehari-hari.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                            <p class="text-xs text-slate-500 font-medium"><strong>Warna:</strong> Putih, Hitam, Abu-abu</p>
+                            <p class="text-2xl font-extrabold text-emerald-900">Rp75.000 <span class="text-xs text-slate-500 font-normal">/ pcs</span></p>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20mau%20pesan%20Kaos%20Polos%20Essential" target="_blank" rel="noopener noreferrer"
+                           class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-emerald-900 text-white font-medium py-3 rounded-xl transition-colors">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=800&auto=format&fit=crop" 
+                             alt="Kemeja Casual Katun" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x750/064e3b/ffffff?text=Kemeja+Casual';">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-black group-hover:text-emerald-900 transition-colors">Kemeja Casual Katun</h3>
+                        <p class="text-slate-600 text-sm mt-2 flex-grow">Kemeja lengan panjang rapi yang cocok untuk acara santai maupun semi-formal.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                            <p class="text-xs text-slate-500 font-medium"><strong>Bahan:</strong> Katun Adem Premium</p>
+                            <p class="text-2xl font-extrabold text-emerald-900">Rp150.000 <span class="text-xs text-slate-500 font-normal">/ pcs</span></p>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20mau%20pesan%20Kemeja%20Casual%20Katun" target="_blank" rel="noopener noreferrer"
+                           class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-emerald-900 text-white font-medium py-3 rounded-xl transition-colors">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop" 
+                             alt="Celana Jeans Modern" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x750/064e3b/ffffff?text=Celana+Jeans';">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-black group-hover:text-emerald-900 transition-colors">Celana Jeans Modern</h3>
+                        <p class="text-slate-600 text-sm mt-2 flex-grow">Celana denim tahan lama dengan potongan fleksibel untuk gaya urban kekinian.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                            <p class="text-xs text-slate-500 font-medium"><strong>Model:</strong> Slim Fit & Regular Fit</p>
+                            <p class="text-2xl font-extrabold text-emerald-900">Rp200.000 <span class="text-xs text-slate-500 font-normal">/ pcs</span></p>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20mau%20pesan%20Celana%20Jeans%20Modern" target="_blank" rel="noopener noreferrer"
+                           class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-emerald-900 text-white font-medium py-3 rounded-xl transition-colors">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=800&auto=format&fit=crop" 
+                             alt="Jaket Hoodie Fleece" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x750/064e3b/ffffff?text=Jaket+Hoodie';">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-black group-hover:text-emerald-900 transition-colors">Jaket Hoodie Fleece</h3>
+                        <p class="text-slate-600 text-sm mt-2 flex-grow">Hoodie hangat dengan tekstur lembut, nyaman dipakai saat cuaca dingin.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                            <p class="text-xs text-slate-500 font-medium"><strong>Bahan:</strong> Fleece Tebal & Halus</p>
+                            <p class="text-2xl font-extrabold text-emerald-900">Rp180.000 <span class="text-xs text-slate-500 font-normal">/ pcs</span></p>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20mau%20pesan%20Jaket%20Hoodie%20Fleece" target="_blank" rel="noopener noreferrer"
+                           class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-emerald-900 text-white font-medium py-3 rounded-xl transition-colors">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group sm:col-span-2 lg:col-span-1">
+                    <div class="relative overflow-hidden aspect-[4/5] bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?q=80&w=800&auto=format&fit=crop" 
+                             alt="Dress Santai Chiffon" 
+                             class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x750/064e3b/ffffff?text=Dress+Chiffon';">
+                        <span class="absolute top-4 left-4 bg-emerald-900 text-white text-xs font-semibold px-3 py-1 rounded-full">New Arrival</span>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-black group-hover:text-emerald-900 transition-colors">Dress Santai Chiffon</h3>
+                        <p class="text-slate-600 text-sm mt-2 flex-grow">Dress anggun bertema minimalis yang jatuh sempurna di badan.</p>
+                        <div class="mt-4 pt-4 border-t border-slate-100 space-y-2">
+                            <p class="text-xs text-slate-500 font-medium"><strong>Bahan:</strong> Chiffon Lembut & Ringan</p>
+                            <p class="text-2xl font-extrabold text-emerald-900">Rp220.000 <span class="text-xs text-slate-500 font-normal">/ pcs</span></p>
+                        </div>
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20mau%20pesan%20Dress%20Santai%20Chiffon" target="_blank" rel="noopener noreferrer"
+                           class="mt-5 w-full inline-flex items-center justify-center gap-2 bg-black hover:bg-emerald-900 text-white font-medium py-3 rounded-xl transition-colors">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            Pesan Sekarang
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CARA PEMESANAN -->
+    <section id="cara-pesan" class="py-16 md:py-24 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold tracking-widest text-emerald-900 uppercase mb-2">Panduan Pesan</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-black">Mudahnya Belanja di ASIO</p>
+                <p class="text-slate-600 mt-3 text-base">Hanya butuh 4 langkah praktis untuk mendapatkan produk impianmu.</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                
+                <!-- Step 1 -->
+                <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="w-12 h-12 bg-emerald-900 text-white font-extrabold rounded-full flex items-center justify-center text-lg mb-6 shadow-md shadow-emerald-900/20">
+                        1
+                    </div>
+                    <div class="mb-3 text-black font-bold text-xl">Pilih Produk</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pilih pakaian atau produk favoritmu dari katalog koleksi ASIO di atas.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="w-12 h-12 bg-emerald-900 text-white font-extrabold rounded-full flex items-center justify-center text-lg mb-6 shadow-md shadow-emerald-900/20">
+                        2
+                    </div>
+                    <div class="mb-3 text-black font-bold text-xl">Konfirmasi Stok</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">Klik tombol "Pesan Sekarang" untuk terhubung ke WhatsApp & cek stok warna/ukuran.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="w-12 h-12 bg-emerald-900 text-white font-extrabold rounded-full flex items-center justify-center text-lg mb-6 shadow-md shadow-emerald-900/20">
+                        3
+                    </div>
+                    <div class="mb-3 text-black font-bold text-xl">Isi Data & Bayar</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">Lengkapi formulir alamat pengiriman dan lakukan pembayaran dengan aman.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative bg-slate-50 p-8 rounded-2xl border border-slate-100 text-center flex flex-col items-center">
+                    <div class="w-12 h-12 bg-emerald-900 text-white font-extrabold rounded-full flex items-center justify-center text-lg mb-6 shadow-md shadow-emerald-900/20">
+                        4
+                    </div>
+                    <div class="mb-3 text-black font-bold text-xl">Barang Dikirim</div>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pesanan langsung dikemas rapi & dikirimkan via kurir ke alamat rumahmu.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER SECTION -->
+    <section id="kontak" class="py-16 md:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-emerald-900 rounded-3xl p-8 sm:p-12 lg:p-16 text-center text-white relative overflow-hidden shadow-2xl">
+                <!-- Background Pattern -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-800/50 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-950/60 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+                    <span class="bg-emerald-800 text-emerald-200 text-xs uppercase font-bold tracking-widest px-4 py-1.5 rounded-full inline-block">
+                        Konsultasi Gratis
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                        Siap Tampil Keren Hari Ini?
+                    </h2>
+                    <p class="text-emerald-100 text-base sm:text-lg leading-relaxed">
+                        Konsultasi ukuran & stok sekarang juga via WhatsApp 
+                        <span class="font-bold underline decoration-emerald-400">+62 812-3456-7890</span> 
+                        atau Email <span class="font-bold underline decoration-emerald-400">cs.asio@gmail.com</span>.
+                    </p>
+                    
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="https://wa.me/6281234567890?text=Halo%20ASIO,%20saya%20ingin%20konsultasi%20dan%20memesan%20produk" 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-white text-emerald-900 hover:bg-emerald-50 font-bold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-lg">
+                            <i data-lucide="message-circle" class="w-6 h-6 text-emerald-900"></i>
+                            Chat WhatsApp Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-slate-400 pt-16 pb-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-5 space-y-4">
+                    <a href="#" class="text-3xl font-extrabold text-white tracking-wider">
+                        ASIO<span class="text-emerald-500">.</span>
+                    </a>
+                    <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
+                        Brand fashion harian terpercaya dengan paduan gaya modern, kenyamanan maksimal, dan harga bersahabat.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="md:col-span-3 space-y-3">
+                    <p class="text-white font-bold text-sm uppercase tracking-wider">Navigasi</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#koleksi" class="hover:text-white transition-colors">Koleksi Favorit</a></li>
+                        <li><a href="#keunggulan" class="hover:text-white transition-colors">Keunggulan ASIO</a></li>
+                        <li><a href="#cara-pesan" class="hover:text-white transition-colors">Cara Pemesanan</a></li>
+                        <li><a href="#kontak" class="hover:text-white transition-colors">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="md:col-span-4 space-y-4">
+                    <p class="text-white font-bold text-sm uppercase tracking-wider">Ikuti Media Sosial</p>
+                    <div class="flex flex-col space-y-3 text-sm">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-9 h-9 rounded-full bg-slate-900 flex items-center justify-center text-slate-300">
+                                <i data-lucide="instagram" class="w-4 h-4"></i>
+                            </div>
+                            <span>@asio_fashion</span>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-9 h-9 rounded-full bg-slate-900 flex items-center justify-center text-slate-300">
+                                <i data-lucide="facebook" class="w-4 h-4"></i>
+                            </div>
+                            <span>ASIO Fashion</span>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 hover:text-white transition-colors">
+                            <div class="w-9 h-9 rounded-full bg-slate-900 flex items-center justify-center text-slate-300">
+                                <i data-lucide="video" class="w-4 h-4"></i>
+                            </div>
+                            <span>@asio_official</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="pt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2026 ASIO Fashion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Toggle icon menu / x
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.setAttribute('data-lucide', 'menu');
+            } else {
+                menuIcon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+    </script>
+</body>
+</html>
